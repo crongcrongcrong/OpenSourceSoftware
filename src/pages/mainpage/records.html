@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <title>러닝 기록</title>
+    <link rel="stylesheet" href="records.css" /> <!-- 별도 CSS 파일 추천 -->
+    <!-- Chart.js CDN (그래프용 라이브러리) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- 헤더 -->
+    <header class="header">
+        <h1 class="logo">러닝 지원 플랫폼</h1>
+        <div class="user-info">
+            <span class="username">홍길동</span>
+        </div>
+    </header>
+
+    <!-- 네비게이션 바 -->
+    <nav>
+        <ul>
+            <li><a href="mainpage.html">홈</a></li>
+        </ul>
+    </nav>
+    
+    <hr>
+
+    <!-- 기록 입력 및 차트 영역 -->
+    <main class="records-container">
+        <h2>러닝 기록 입력</h2>
+        <form class="record-form">
+            <label for="date">날짜</label>
+            <input type="date" id="date" name="date" />
+
+            <label for="distance">거리 (km)</label>
+            <input type="number" step="0.01" id="distance" name="distance" placeholder="예: 5.2" />
+
+            <label for="time">시간 (분)</label>
+            <input type="number" step="1" id="time" name="time" placeholder="예: 30" />
+
+            <label for="pace">평균 페이스 (분/km)</label>
+            <input type="number" step="0.01" id="pace" name="pace" placeholder="예: 5.77" />
+
+            <button type="button" class="add-record-btn" onclick="addRecord()">기록 저장</button>
+        </form>
+
+        <h2>러닝 기록 차트</h2>
+        <canvas id="progressChart" width="800" height="400"></canvas>
+
+        <hr>
+        
+        <h2>기록 목록</h2>
+        <table class="record-table">
+            <thead>
+                <tr>
+                    <th>날짜</th>
+                    <th>거리 (km)</th>
+                    <th>시간 (분)</th>
+                    <th>평균 페이스 (분/km)</th>
+                </tr>
+            </thead>
+            <tbody id="recordTableBody">
+                <!-- 기록이 여기에 추가됩니다 -->
+            </tbody>
+        </table>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <p>&copy; 2025 러닝 지원 플랫폼. All rights reserved.</p>
+    </footer>
+
+    <!-- Chart.js를 이용한 차트 스크립트 -->
+    <script>
+        const ctx = document.getElementById('progressChart').getContext('2d');
+        const progressChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [], // 날짜
+                datasets: [{
+                    label: '거리 (km)',
+                    data: [], // 거리 데이터
+                    borderColor: 'blue',
+                    backgroundColor: 'rgba(0, 0, 255, 0.1)',
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: '날짜'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: '거리 (km)'
+                        },
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // 기록 저장 함수
+        function addRecord() {
+            const date = document.getElementById('date').value;
+            const distance = parseFloat(document.getElementById('distance').value);
+            const time = parseInt(document.getElementById('time').value);
+            const pace = parseFloat(document.getElementById('pace').value);
+
+            if (!date || isNaN(distance) || isNaN(time) || isNaN(pace)) {
+                alert('모든 항목을 올바르게 입력하세요.');
+                return;
+            }
+
+            // 테이블에 새 기록 추가
+            const tbody = document.getElementById('recordTableBody');
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${date}</td>
+                <td>${distance.toFixed(2)}</td>
+                <td>${time}</td>
+                <td>${pace.toFixed(2)}</td>
+            `;
+            tbody.appendChild(row);
+
+            // 차트 데이터 업데이트
+            progressChart.data.labels.push(date);
+            progressChart.data.datasets[0].data.push(distance);
+            progressChart.update();
+
+            // 입력 폼 초기화
+            document.querySelector('.record-form').reset();
+        }
+    </script>
+</body>
+</html>

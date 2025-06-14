@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+    <link rel="stylesheet" href="signup.css" />
+</head>
+<body>
+    <div class="signup-container">
+        <h2>회원가입</h2>
+        <form action="#" method="post">
+            <div class="input-group">
+                <label for="username">아이디 또는 이메일</label>
+                <input type="text" id="username" name="username" required />
+            </div>
+            <div class="input-group">
+                <label for="password">비밀번호</label>
+                <input type="password" id="password" name="password" required />
+            </div>
+            <div class="input-group">
+                <label for="confirm_password">비밀번호 확인</label>
+                <input type="password" id="confirm_password" name="confirm_password" required />
+            </div>
+            <div class="input-group">
+                <label for="name">이름 또는 닉네임</label>
+                <input type="text" id="name" name="name" required />
+            </div>
+            <!-- 선택적 항목 -->
+            <!--
+            <div class="input-group">
+                <label for="phone">전화번호</label>
+                <input type="tel" id="phone" name="phone" />
+            </div>
+            -->
+            <div class="checkbox-group">
+                <input type="checkbox" id="terms" name="terms" required />
+                <label for="terms">약관에 동의합니다.</label>
+            </div>
+            <button type="submit" class="signup-button">회원가입</button>
+        </form>
+        <div class="links">
+            <a href="../login/login.html">로그인 페이지로 돌아가기</a>
+        </div>
+    </div>
+</body>
+</html>

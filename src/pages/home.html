@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initail-scale=1.0"/>
+        <title>LetDally</title>
+        <link rel="stylesheet" href="common-form.css">
+    </head>
+    <body>
+        <header>일단 달려</header>
+            <div class="buttons">
+                <button class="login" id="login-button">로그인</button>
+                <button class="signup" id="signup-button">회원가입</button>
+            </div>
+            <script>
+                function setupEventHandlers() {
+                    document.getElementById('login-button').addEventListener('click', () => {
+                        window.location.href = 'login/login.html';
+                    });
+                    document.getElementById('signup-button').addEventListener('click', () =>  {
+                        window.location.href = 'signup/signup.html';
+                    });
+                }3
+
+                window.onload = setupEventHandlers;
+                
+            </script>
+    </body>
+</html>
