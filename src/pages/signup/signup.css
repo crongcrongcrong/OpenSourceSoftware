@@ -1,0 +1,79 @@
+/* 전체 컨테이너 */
+.signup-container {
+  width: 350px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+/* 제목 */
+.signup-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* 입력 그룹 */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+/* 라벨 */
+.input-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* 인풋 */
+.input-group input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* 체크박스 그룹 */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* 회원가입 버튼 */
+.signup-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.signup-button:hover {
+  background-color: #45a049;
+}
+
+/* 링크 */
+.links {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 10px;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}

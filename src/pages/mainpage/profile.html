@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <title>내 정보 - 프로필</title>
+    <link rel="stylesheet" href="profile.css" /> <!-- 별도 CSS 파일 추천 -->
+</head>
+<body>
+    <!-- 헤더 -->
+    <header class="header">
+        <h3 class="logo">러닝 지원 플랫폼</h3>
+        <div class="user-info">
+            <span class="username">[사용자 이름]</span>
+        </div>
+    </header>
+
+    <hr>
+    <!-- 네비게이션 바 -->
+    <nav>
+        <ul>
+            <li><a href="mainpage.html">홈</a></li>
+        </ul>
+    </nav>
+    <hr>
+    <!-- 프로필 수정 폼 -->
+    <main class="profile-container">
+        <h2>내 정보 수정</h2>
+        <form class="profile-form">
+            <label for="name">이름</label>
+            <input type="text" id="name" name="name" value="홍길동" />
+<br>
+            <label for="email">이메일</label>
+            <input type="email" id="email" name="email" value="honggildong@example.com" />
+<br>
+            <label for="password">비밀번호</label>
+            <input type="password" id="password" name="password" placeholder="새 비밀번호 입력" />
+<br>
+            <span>
+                <label for="profile-pic">프로필 사진</label>
+            <input type="file" id="profile-pic" name="profile-pic" />
+            </span>
+            <button type="submit" class="save-btn">저장하기</button>
+        </form>
+    </main>
+<hr>
+    <!-- 푸터 -->
+    <footer class="footer">
+        <p>&copy; 2025 러닝 지원 플랫폼. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">이용약관</a> | <a href="#">개인정보처리방침</a>
+        </div>
+    </footer>
+</body>
+</html>
