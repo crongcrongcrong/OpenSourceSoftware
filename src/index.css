@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* MainPage의 배경색과 통일감을 주기 위해 이 배경색은 유지하는 것이 좋습니다. */
+  background-color: #f0f2f5; 
 }
 
 code {

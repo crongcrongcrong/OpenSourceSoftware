@@ -1,0 +1,47 @@
+.workout-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+
+.workout-container h2 {
+  margin-top: 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.workout-tabs {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  border-bottom: 2px solid #eee;
+}
+
+.workout-tabs button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #888;
+  border-bottom: 2px solid transparent;
+  transform: translateY(2px); /* 아래 테두리와 겹치게 살짝 내림 */
+}
+
+.workout-tabs button.active {
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+}
+
+.workout-content {
+  padding: 20px;
+  line-height: 1.8;
+}
+
+.workout-content ul {
+  padding-left: 20px;
+  margin: 0;
+}

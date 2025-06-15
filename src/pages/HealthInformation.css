@@ -1,0 +1,70 @@
+.health-info-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+  min-height: 450px;
+}
+
+.health-info-container h2 {
+  margin-top: 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.injury-list {
+  margin-top: 15px;
+}
+
+.injury-item {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 10px 0;
+}
+
+.injury-item:last-child {
+  border-bottom: none;
+}
+
+.injury-item h3 {
+  margin: 0;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.injury-item h3:hover {
+  background-color: #f7f7f7;
+}
+
+.injury-details {
+  padding: 15px;
+  margin-top: 10px;
+  background-color: #fafafa;
+  border-left: 3px solid #007bff;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.injury-details h4 {
+  margin: 0 0 5px 0;
+  color: #333;
+}
+
+.injury-details p {
+  margin: 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* 간단한 애니메이션 효과 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

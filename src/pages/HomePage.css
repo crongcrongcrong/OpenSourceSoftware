@@ -1,0 +1,59 @@
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* 화면 전체 높이를 차지하도록 설정 */
+  text-align: center;
+  background-color: #f8f9fa;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.homepage-container h1 {
+  font-size: 3.5rem;
+  color: #212529;
+  margin-bottom: 10px;
+}
+
+.homepage-container p {
+  font-size: 1.2rem;
+  color: #6c757d;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.homepage-container nav {
+  display: flex;
+  gap: 20px;
+}
+
+/* 모든 버튼의 공통 스타일 */
+.homepage-container button {
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.login-button {
+  background-color: #4CAF50;
+  color: white;
+  border-color: #007bff;
+}
+
+.login-button:hover {
+  background-color: #1e8b22;
+}
+
+.signup-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.signup-button:hover {
+  background-color: #1e8b22;
+}

@@ -1,0 +1,91 @@
+.records-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+
+.records-container h2 {
+  margin-top: 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+/* 2단 레이아웃을 위한 그리드 컨테이너 */
+.records-layout {
+  display: grid;
+  gap: 30px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.list-container h3 {
+  margin-top: 0;
+}
+.records-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.record-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 5px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.record-item:last-child {
+  border-bottom: none;
+}
+.record-date { font-weight: bold; color: #333; }
+.record-distance { color: #007bff; }
+.record-time { color: #555; }
+
+.add-record-button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #007bff;
+  background-color: #e7f3ff;
+  border: 2px dashed #007bff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.add-record-button:hover {
+  background-color: #d0e7ff;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+}
+.modal-content h3 {
+  margin-top: 0;
+}
+.modal-buttons {
+  margin-top: 20px;
+  text-align: right;
+}
+.modal-buttons button {
+  padding: 8px 16px;
+  margin-left: 10px;
+}
+

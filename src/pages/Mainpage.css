@@ -1,0 +1,15 @@
+.mainpage-container {
+  background-color: #f0f2f5;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.main-content {
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 20px; 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px; 
+}
+
