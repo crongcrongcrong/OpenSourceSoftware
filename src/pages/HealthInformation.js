@@ -33,7 +33,7 @@ function HealthInformation() {
     if (selectedInjuryId === id) {
       setSelectedInjuryId(null);
     } else {
-      // 다른 항목을 클릭했다면, 해당 id로 선택 상태를 변경합니다.
+      // 다른 항목을 클릭했다면, 해당 id로 선택 상태를 변경.
       setSelectedInjuryId(id);
     }
   };

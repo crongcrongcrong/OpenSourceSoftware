@@ -10,9 +10,9 @@
   box-sizing: border-box;
 }
 
-/* 로고 영역 (첫 번째 줄) */
 .logo {
-    width: 100%; /* 너비를 꽉 채워 왼쪽 정렬의 기준을 만듭니다. */
+    width: 100%; 
+    align-items: flex-start;
 }
 
 .logo a {
@@ -20,12 +20,11 @@
 }
 
 .logo h2 {
-  margin: 0 0 5px 0; /* 아래쪽에만 10px 여백을 주어 두 번째 줄과 간격을 만듭니다. */
+  margin: 0 0 5px 0; 
   font-size: 1.8rem;
   color: #333;
 }
 
-/* 우측 컨텐츠 영역 (두 번째 줄) */
 .header-content {
   width: 100%; /* 너비를 꽉 채웁니다. */
   display: flex;
@@ -51,12 +50,11 @@
 .mode-toggle {
   display: flex;
   align-items: center;
-  gap: 10px; /* 아이콘/텍스트와 스위치 사이의 간격 */
+  gap: 10px; 
   font-weight: bold;
   color: #555;
 }
 
-/* 스위치 전체를 감싸는 라벨 */
 .toggle-switch {
   position: relative;
   display: inline-block;
@@ -64,7 +62,7 @@
   height: 28px;
 }
 
-/* 실제 체크박스는 화면에서 숨깁니다. */
+/* 실제 체크박스는 화면에서 숨김. */
 .toggle-switch input {
   opacity: 0;
   width: 0;
@@ -99,7 +97,7 @@
 
 /* 체크박스가 선택(checked)되었을 때 슬라이더의 스타일 */
 input:checked + .slider {
-  background-color: #2196F3; /* 켜졌을 때 배경색 */
+  background-color: #2196F3; 
 }
 
 /* 체크박스가 선택(checked)되었을 때 손잡이의 위치 */

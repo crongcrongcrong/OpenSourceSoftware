@@ -10,9 +10,9 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 function Records() {
   // 임시 데이터.
   const [runningRecords, setRunningRecords] = useState([
-    { id: 1, date: '2025-06-11', distance: 10.0, time: '55:45' },
-    { id: 2, date: '2025-06-13', distance: 3.0, time: '16:10' },
-    { id: 3, date: '2025-06-15', distance: 5.2, time: '28:30' },
+    { id: 1, date: '2024-11-26', distance: 22.2, time: '2:29:23' },
+    { id: 2, date: '2024-12-05', distance: 10.02, time: '57:41' },
+    { id: 3, date: '2025-04-01', distance: 11.01, time: '1:09:23' },
   ]);
 
   // 기록 추가 창(모달)의 표시 여부를 관리하는 state
