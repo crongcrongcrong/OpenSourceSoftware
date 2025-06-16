@@ -17,7 +17,8 @@
 4. 참고사항
 - 추천 러닝 코스 기능은 카카오맵 API를 사용한다. 지도가 정상적으로 보이기 위해 카카오 개발자 JavaScript 키가 필요하다. (구현 미완성)
 
--구현 완료를 가정
+*구현 완료를 가정*
 -프로젝트 폴더 내의 'public' 폴더 안에 있는 'index.html' 파일을 연다.
-- 파일의 '<head>' 태그 안에서 아래와 같은 스크립트 태그를 찾아 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=JAVASCRIPT_KEY 입력 부분&libraries=services"></script>
-  JavaScript 앱 키를 교체하고 저장하면 지도 기능이 정상적으로 동작.
+- 파일의 '<head>' 태그 안에서 아래와 같은 스크립트 태그를 찾아
+- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=JAVASCRIPT_KEY 입력 부분&libraries=services"></script> 
+- JavaScript 앱 키를 교체하고 저장하면 지도 기능이 정상적으로 동작.
